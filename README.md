@@ -1,7 +1,7 @@
 # Simple React Component to create table from JSON File. 
 
 App can create table from JSON with 2 nested levels, for example:
-
+```
 {
     "id": 1,
     "name": "Leanne Graham",
@@ -24,7 +24,8 @@ App can create table from JSON with 2 nested levels, for example:
       "catchPhrase": "Multi-layered client-server neural-net",
       "bs": "harness real-time e-markets"
     }
-    
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
