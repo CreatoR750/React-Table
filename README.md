@@ -1,6 +1,7 @@
 # Simple React Component to create table from JSON File. 
 
 App can create table from JSON with 2 nested levels, for example:
+
 {
     "id": 1,
     "name": "Leanne Graham",
