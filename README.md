@@ -25,7 +25,7 @@ App can create table from JSON with 2 nested levels, for example:
       "bs": "harness real-time e-markets"
     }
 ```
-Working example on [codepen] (https://codepen.io/creator750/pen/wveQyzw).
+Working example on [codepen](https://codepen.io/creator750/pen/wveQyzw).
 
 # Getting Started with Create React App
 
