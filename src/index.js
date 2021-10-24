@@ -5,6 +5,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import GetTable from './App';
 
+
 ReactDOM.render(
   <React.StrictMode>
    <GetTable/>

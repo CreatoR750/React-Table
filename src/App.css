@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  background: white;
+  width: 70%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  background-color: #8fb4ff8f;
+  font-weight: normal;
+  color: black;
+  width: 100%;
+  border-bottom: 2px solid black;
+  padding: 18px 10px;
+}
+td {
+  color: black;
+  padding: 5px 8px;
+  transition: 0.3s linear;
+}
+tr:hover td {
+  color: #6699ff;
+}

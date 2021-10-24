@@ -1,28 +1,25 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-class GetTable extends React.Component {
-  constructor(props) {
-      super(props);
+function GetTable () {
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true); 
+ 
+  useEffect(()=> {
+      loadData()
+      }, []);
+
+   const loadData = async () => {
+       const responce = await fetch ('https://jsonplaceholder.typicode.com/users')
+       const data = await responce.json();
+       setData(data);
+       setLoading(false);
+   }
+
+  function getHeaders(){
     
-      this.state = {
-        data:[],
-        loading:true,
-      };
-
-      this.getHeaders = this.getHeaders.bind(this);
-      this.getData = this.getData.bind(this);
-  }
-
-  componentDidMount() {
-     
-      fetch('https://jsonplaceholder.typicode.com/users')
-       .then(response => response.json())
-       .then(data => this.setState({data: data, loading:false}));
-  }
-
-  getHeaders(){
-    var keys = Object.entries(this.state.data[1]);
+    var keys = Object.entries(data[1]);
     return keys.map((key,index) => {
       if (typeof key[1]==='object'){
       return [
@@ -45,9 +42,7 @@ class GetTable extends React.Component {
     });
   }
 
-  getData() {
-
-    var data = this.state.data;
+  function getData() {
     return data.map(data =>{
       return (
        <tr>
@@ -78,27 +73,24 @@ class GetTable extends React.Component {
       )
     })
   }
- 
-  render() {
-         
+      
       return (
         <div>
-        {this.state.loading ? <div>loading *** </div> : <div> 
-            <table border="1">
+        {loading ? <div> loading *** </div> : <div> 
+            <table key = "table" border="1">
               <tbody>
-            <tr>
-                {this.getHeaders()}
+            <tr key = "headers">
+                {getHeaders()}
             </tr>
-                {this.getData()}
+                {getData()}
             </tbody>
           </table>
+          
         </div>}
         </div>
   
       );
-  }
-}
+  
+        }
  
-export default GetTable; 
-
-
+export default GetTable;
