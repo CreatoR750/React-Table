@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import reportWebVitals from './reportWebVitals';
-import GetTable from './App';
+import GetTable from './GetTable';
 
 
 ReactDOM.render(
